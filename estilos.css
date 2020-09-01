@@ -1,14 +1,19 @@
-table {
-    width: 600px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    }
-    td {
-    border: 1px solid black;
-    }
-    th {
-    border: 1px solid black;
-    }
-    tfoot {
-    text-align: center;
-    }
+#witcher{
+    background-image: url(img/witcher-bg.jpg);
+}
+
+#zelda{
+    background-image: url(img/zelda.jpg);
+}
+
+#nier{
+    background-image: url(img/nier.jpg);
+}
+
+#reddead{
+    background-image: url(img/reddead.jpg);
+}
+
+#skyrim{
+    background-image: url(img/skyrim.jpg);
+}

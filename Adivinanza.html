@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 
     <title>Adivinanza</title>
 </head>
@@ -38,7 +38,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Login.html">Login</a>
+                        <a class="nav-link" href="Registro.html">Registro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Adivinanza.html">Adivina</a>
@@ -48,13 +48,14 @@
         </nav>
     </header>
     <div class="container">
-        <h1>¿De que color es el caballo blanco de San Martín?</h1>
+        <h1 class="text-center">Vuelo de noche, duermo de día y nunca verás plumas en ala mía.</h1>
         Respuesta:<br>
-        <input type="text" id="adivina"><br>
+        <input type="text" id="rta"><br>
         <br>
         <p id="intento">Intentos: </p>
         <br>
-        <input type="submit" value="Adivinar" onclick="adivinar()">
+        <p id="pista">Pista: </p>
+        <button class="btn btn-primary" id="boton" onclick="adivinar()">Adivinar!</button>
 
     </div>
     <!-- Optional JavaScript -->
@@ -70,18 +71,33 @@
         crossorigin="anonymous"></script>
 
     <script>
+        var rta1 = "murcielago";
+        var rta2 = "Murcielago";
+        var rta3 = "MURCIELAGO";
+        var contador = 3;
+        document.getElementById("intento").innerHTML = "Intentos: " + contador;
+
         function adivinar() {
-            let adivina = document.getElementById('adivina').value;
-            let intento = document.getElementById('intento')
-            let contador = 4;
-            if (adivina === "blanco") {
-                alert('Bien hecho!')
-                intento.innerHTML = "Intentos: " + contador;
-            }
-            else if (adivina != "blanco" && contador > 0) {
-                alert('Respuesta incorrecta')
+            var rtaFinal = document.getElementById("rta").value;
+
+            if (rtaFinal == rta1 || rtaFinal == rta2 || rtaFinal == rta3) {
+                alert("Respuesta correcta!");
+                document.getElementById("intento").innerHTML = "Intentos: " + contador;
+            } else {
+                alert("Lo siento, respuesta incorrecta")
                 contador--;
-                intento.innerHTML = "Intentos: " + contador;
+                document.getElementById("intento").innerHTML = "Intentos: " + contador;
+                if (contador == 2) {
+                    document.getElementById("pista").innerHTML = "Pista: TSiene colmillos";
+                }
+                if (contador == 1) {
+                    document.getElementById("pista").innerHTML = "Pista: Es casi ciegos";
+                }
+                if (contador == 0) {
+                    alert("Ese fue tu último intento, mejor suerte la próxima");
+                    bton = document.getElementById("boton");
+                    bton.disabled = true;
+                }
             }
         }
     </script>

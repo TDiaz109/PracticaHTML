@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
     <title>Página Principal</title>
 </head>
 
@@ -39,7 +39,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Login.html">Login</a>
+                        <a class="nav-link" href="Registro.html">Registro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Adivinanza.html">Adivina</a>
@@ -48,33 +48,26 @@
             </div>
         </nav>
     </header>
-    <!-- Default form login -->
-    <form class="text-center border border-light p-5" action="#!">
-
-        <p class="h4 mb-4">Sign in</p>
-
-        <!-- Email -->
-        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-        <!-- Password -->
-        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-        <div class="d-flex justify-content-around">
-            <div>
-                <!-- Remember me -->
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-                </div>
-            </div>
-            <div>
-                <!-- Forgot password -->
-                <a href="">Forgot password?</a>
-            </div>
+    <h1 class="text-center col-12">Registrate</h1>
+    <form action="">
+        <div class= "container text-center">
+            <label for="username" class="col-12">Nombre</label>
+            <input type="text" class="form-control" required>
         </div>
-
-        <!-- Sign in button -->
-        <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+        <div class= "container text-center form-group">
+            <label for="Apellido" class="col-12">Apellido</label>
+            <input type="text" class="form-control" required>
+        </div>
+        <div class= "container text-center form-group">
+            <label for="email" class="col-12">Correo electrónico</label>
+            <input type="email" class="form-control" required>
+        </div>
+        <div class= "container text-center form-group">
+            <label for="password" class="col-12">Contraseña</label>
+            <input type="password" class="form-control" required><br>
+            <button class="btn btn-primary" class="col-12">Registro</button>
+        </div>
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
